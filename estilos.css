@@ -1,0 +1,566 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Marvel&display=swap');*/
+*{ margin: 0; padding: 0; box-sizing: border-box;
+    /*font-family: 'Marvel', sans-serif;*/
+}
+
+body{
+    background-color: rgba(0, 255, 55, 0.007);
+    
+}
+
+header{
+    z-index: 100;
+    width: 100%;
+    height: 220px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+/*sección popup*/
+
+.capa{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    background-color: rgba(0, 255, 55, 0.007);
+    
+}
+.modal{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background:rgba(0, 0, 0, 0.952);
+    top: 0;
+    left: 0;
+    display: flex;
+    animation: modal 2s 3s forwards;    
+    visibility: hidden;
+    opacity: 0;
+}
+#cerrar:checked + label, #cerrar:checked ~.modal{
+    display: none;
+}
+.contenido{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    background: white;
+    border-radius: 5px;
+}
+#cerrar{
+    display: none;
+}
+#cerrar + label {
+    position: fixed;
+    color: #fff;
+    font-size: 25px;
+    z-index: 30;
+    background: darkred;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    right: 10px;
+    cursor: pointer;
+    animation: modal 2s 3s forwards;    
+    visibility: hidden;
+    opacity: 0;
+}
+
+@keyframes modal{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* fin sección popup*/
+
+.primary {
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(153deg, rgba(11,74,145,1) 0%, rgba(103,180,226,1) 79%);
+}
+.container{
+    width: 90%;
+    height: 25px;
+    margin:auto;
+    display: flex;    
+}
+.topbar-left{
+    width: 50%;
+    height: 25px;
+    overflow: hidden;
+    display: flex;
+}
+.topbar-left a, p{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    color: white;
+    text-align: right;
+    margin-top: 5px;
+    margin-left: 3%;
+}
+.topbar-right{
+    width: 50%;
+    height: 25px;
+    display: flex;
+}
+.topbar-right-text{
+    width: 80%;   
+}    
+.topbar-right p {
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: right;
+    color: white;
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 2%;
+    
+}
+.topbar-right-redes{
+    width: 20%;
+    text-align: center;
+    margin-top: 2px;
+}
+.topbar-right img{
+    width: 16%;
+}
+/*logos*/
+
+.logos{
+    width: 100%;
+    height: 130px;
+    margin: auto;
+    overflow: hidden;
+    background-color: #fff;
+    
+}
+.abrigo{
+    width: 90%;
+    height: 130px;
+    margin: auto;   
+    display: flex;   
+}
+.elemento{
+    width: 30%;
+}
+#logodgr img{
+    width: 60%;
+    margin-top: 1%;
+}
+
+#logotodos{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#logotodos img{
+    margin-top: 10%;
+}
+.imagen {
+    width: 100%;
+    height: 70%;
+    text-align: right;  
+}
+.imagen img{
+    width: 43%;
+    margin-top: 2px;
+}
+.descripcion{
+    width: 100%;
+    height: 30%;   
+}
+.campo {
+    width: 45%;
+    margin-left: auto;
+    text-align: center;
+    text-decoration: none;
+}
+/*seccion menu*/
+.campo a{
+    text-decoration: none;
+}
+.navegacionmain{
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(153deg, rgba(11,74,145,1) 0%, rgba(103,180,226,1) 79%);
+}
+.semibarra{
+    width: 90%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+}
+.listado{
+    width: 70%;
+    height: 60px; 
+}
+.menu{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 8px;
+    list-style: none;
+}
+.menu ul {
+    list-style:none;
+    cursor: pointer;
+}
+.menu li a{
+    text-decoration: none;
+    /*background: linear-gradient(153deg, rgba(11,74,145,1) 0%, rgba(103,180,226,1) 79%);*/
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+.menu > li{
+    float: left;
+}
+.menu li a:hover{
+    color: rgb(111, 176, 250);
+    transition: all 0.5s ease;    
+}
+.menu li ul{
+    border-radius: 3%;
+    position: absolute;
+    min-width: 140px;
+    /*display: none;*/
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1.2s ease; /*este funciona ida y vuelta*/
+    /*transition:opacity 1.5s ease;  ---este metodo solo funcionapara apareición de submenu*/
+    background: linear-gradient(153deg, rgba(11,74,145,1) 0%, rgba(103,180,226,1) 79%);
+}
+.menu li ul a{
+    text-align: left;
+}
+.menu li:hover > ul{
+    /*display: block;*/
+    visibility: visible;
+    opacity: 1;
+        
+}
+.menu li ul li{
+    position:relative;
+    cursor: pointer;
+    right: 0px;
+    text-align: left;
+}
+.menu li ul li ul{
+    right: -140px;
+    top: 0px ;
+}
+.buscador{
+    width: 30%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.buscar{
+    position: absolute;
+    padding: 7px;    
+}
+.buscar input{
+    margin-left: 0px;
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 2px solid #00923f;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+.btn{
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(93deg, rgba(1,100,54,1) 0%, rgba(0,146,63,1) 33%);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    
+}
+.buscar:hover input{
+    width: 240px;
+}
+.buscar input:focus{
+    width: 370px;
+}
+
+/*/--------------------------------------FIN HEADER --------------------------------*/
+
+.infomain{
+    margin: 215px auto 0px;
+    width: 100%;
+    height: 360px;
+    background-color: teal;
+    display: flex;  
+}
+.contenedor{
+    margin: 2px auto 2px;
+    background: linear-gradient(93deg, rgba(1,100,54,1) 0%, rgba(0,146,63,1) 33%);
+    width: 80%;
+    height: 354;
+    padding: 02px;
+     
+}
+ul, li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.slider{
+    position:relative;
+    width: 100%;
+    height: 300px;
+}
+ul.slider li{
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    background-color: rgb(255, 255, 255);
+    transition:opacity .5s;
+}
+ul.slider li img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+ul.slider li:first-child{
+    opacity: 1;
+}
+ul.slider li:target{
+    opacity: 1;
+}
+.selector{
+    text-align: center;
+    margin: 10px;
+}
+.selector li{
+    display: inline-block;
+    text-align: center;
+}
+.selector li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(153deg, rgba(11,74,145,1) 0%, rgba(103,180,226,1) 79%);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+.calendario{
+    background: rgba(185, 108, 108, 0.541);
+    width: 20%;
+    height: 354;
+    margin: 2px auto 2px;
+}
+.calendario p{
+    text-align:justify;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*-----------------fin zona slider------------------------*/
+
+.infomain2{
+    width: 100%;
+    height: 410px;    
+}
+.atajos{
+    width: 100%;
+    height: 390px;    
+    overflow: hidden;
+    padding: 50px;
+    margin: auto;
+    text-align: center;
+}
+.atajos img{
+    width: 45%;        
+}
+.item{
+    border: 1px solid rgba(0, 128, 0, 0);
+    border-radius: 4%;
+    padding: 1em;
+    width: 18%;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    margin: .8%;
+    position: relative;
+    background-color:transparent;    
+    transition: all 0.4s ease;
+}
+.item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background-color: #20e2d7;
+    transition: all 500ms ease;
+    /*z-index: -1;*/
+}
+.item:hover {
+    background: linear-gradient(153deg, rgba(103,180,226,1) 0%, rgba(103,180,226,1) 79%);
+    box-shadow: 0 0 10px rgba(103,180,226,1), 0 0 20px rgba(103,180,226,1), 0 0 20px rgba(103,180,226,1);
+    color: #434343;
+  }
+figcaption{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    padding: 5%;
+    width: 90%;      
+}
+.item a{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0B4A91;
+    text-align: center;
+    font-weight: bold;    
+}
+#Medios figcaption {    
+    left: 5%;
+}
+#Recaudacion figcaption {
+    left: 10%;
+}
+/*-----------------fin atajos------------------*/
+
+.addinfo{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(93deg, rgba(1, 100, 54, 0.486) 0%, rgba(0, 146, 63, 0.562) 33%);
+}
+
+.avisos p{
+    text-align: left;
+    font-size: 20px;
+    color: white;
+    text-shadow: 30px black;
+    letter-spacing: 4px;
+
+}
+
+footer{
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(153deg, rgba(11,74,145,1) 0%, rgba(103,180,226,1) 79%);
+    margin-top: 0px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+.final{
+    width: 33%;
+    height: auto;
+    display: inline-block;    
+    margin: 50px;
+    vertical-align: top;
+    
+}
+.final p, a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+#Rivadavia_675{
+    padding: 8px;
+}
+#final2{
+    position: relative;
+    top: -12px;
+}
+#final3 img{
+    width: 6%;
+}
+#final3 {
+    padding: 3px;
+}
+.mails{
+    padding: 13px;
+}
+.mails a{
+    text-decoration: none;
+    color: #0B4A91;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+background: rgb(11,74,145);
+background: linear-gradient(153deg, rgba(11,74,145,1) 0%, rgba(103,180,226,1) 79%);*/
+
+
+
+/*background: rgb(1,100,54);
+background: linear-gradient(93deg, rgba(1,100,54,1) 0%, rgba(0,146,63,1) 33%);*/
